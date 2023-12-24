@@ -3,12 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="css/maindos.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/maindos.js"></script>
+    
+
+
+    <script>
+        console.log("script")
+        $(function(){
+        // $("#header").load("/subtemplates/header.html"); 
+        $("#header").load("/subtemplates/headerdos.html")
+        });
+        console.log("script end")
+    </script>
     <title>TEST PRIMERA WEB</title>
 </head>
 <body>
+    <div class="contenedor-modal">
+        <a href="#" class="fa fa-close btn-cerrar-modal" id="btn-cerrar-modal"></a>
+    </div>
+
+    <div class="contenedor-modal-responsive">
+        <a href="#" class="fa fa-close btn-cerrar-modal-responsive" id="btn-cerrar-modal-responsive"></a>
+    </div>
+    <header class="header">
+        <div class="contenedor-header">
+            <div class="primer-conjunto">
+                <div class="logo-title">
+                    <a href="/">
+                        <img src="https://www.google.com/logos/doodles/2023/seasonal-holidays-2023-6753651837110165.2-s.png" alt="">
+                    </a>
+                </div>
+                <div class="contenedor-buscador">
+                    <input type="search" class="buscador" placeholder="Buscar:">
+                </div>
+            </div>
+            <div class="segundo-conjunto menu-normal">
+                <div class="contenedor-menu">
+                    <ul class="menu">
+                        <li><a href="#"><i class="fa fa-envelope"></i> Contacto</a></li>
+                        <li><a href="#" id="btn-productos" class="btn-productos"><i class="fa fa-tags"></i> Productos 
+                            <!-- <i class="fa fa-chevron-down"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20px" height="20px" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" part="icon blz-icon"><path d="m6 9 6 6 6-6"></path></svg>
+                        </a></li>
+                        <li><a href="#"><i class="fa fa-cogs"></i> Servicios</a></li>
+                        <li><a href="#" id="btn-quienes-somos" class="btn-quienes-somos"><i class="fa fa-address-book"></i> Quienes Somos 
+                            <!-- <i class="fa fa-chevron-down"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20px" height="20px" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" part="icon blz-icon"><path d="m6 9 6 6 6-6"></path></svg>
+                        </a></li>
+                        <li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contenedor-submenus">
+                <div class="contenedor-submenu-quienes-somos" id="contenedor-submenu-quienes-somos">
+                    <a href="#">Misión</a>
+                    <a href="#">Visión</a>
+                    <a href="#">Valores</a>
+                    <a href="#">Objetivos</a>
+                </div>
+                <div class="contenedor-submenu-productos" id="contenedor-submenu-productos">
+                    <a href="#">Diseño Gráfico</a>
+                    <a href="#">Desarrollo Web</a>
+                    <a href="#">Redes Sociales</a>
+                    <a href="#">Sistema Web</a>
+                    <a href="#">Aplicación Móvil</a>
+                </div>
+            </div>
+            <div class="contenedor-sidebar-responsive">
+                <div class="contenedor-btn-menu">
+                    <a href="#" class="btn-menu" id="btn-menu">
+                        <i class="fa fa-bars"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" part="icon blz-icon"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" viewBox="0 0 30 26"><g id="Grupo_1301" data-name="Grupo 1301" transform="translate(-358 -76)"><g id="Rectángulo_174" data-name="Rectángulo 174" transform="translate(358 76)" fill="none" stroke="#fff" stroke-width="1"><rect width="30" height="26" rx="6" stroke="none"></rect><rect x="0.5" y="0.5" width="29" height="25" rx="5.5" fill="none"></rect></g><g id="Grupo_4007" data-name="Grupo 4007" transform="translate(1912 -50)"><rect id="Rectángulo_158" data-name="Rectángulo 158" width="20" height="3" transform="translate(-1545.01 130.368) rotate(45)" fill="#fff"></rect><rect id="Rectángulo_3416" data-name="Rectángulo 3416" width="20" height="3" transform="translate(-1530.868 132.49) rotate(135)" fill="#fff"></rect></g></g></svg>
+                    </a>
+                </div>
     
+                <div class="contenedor-menu-responsive">
+                    <ul class="menu-responsive">
+                        <li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
+                        <li><a href="#" id="btn-quienes-somos-responsive" class="btn-quienes-somos-responsive"><i class="fa fa-address-book"></i> Quienes Somos 
+                            <!-- <i class="fa fa-chevron-right"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20px" height="20px" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" part="icon blz-icon"><path d="m6 9 6 6 6-6"></path></svg>
+                        </a></li>
+                        <li><a href="#"><i class="fa fa-cogs"></i> Servicios</a></li>
+                        <li><a href="#" id="btn-productos-responsive" class="btn-productos-responsive"><i class="fa fa-tags"></i> Productos 
+                            <!-- <i class="fa fa-chevron-right"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="20px" height="20px" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" part="icon blz-icon"><path d="m6 9 6 6 6-6"></path></svg>
+                        </a></li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> Contacto</a></li>
+                    </ul>
+                </div>
+    
+                <div class="contenedor-submenus-responsive">
+                    <div class="contenedor-submenu-quienes-somos-responsive" id="contenedor-submenu-quienes-somos-responsive">
+                        <a href="#" class="btn-cerrar-submenu-quienes-somos-responsive" id="btn-cerrar-submenu-quienes-somos-responsive">
+                            <!-- <i class="fa fa-close"></i> -->
+                            Volver
+                        </a>
+                        <a href="#">Misión</a>
+                        <a href="#">Visión</a>
+                        <a href="#">Valores</a>
+                        <a href="#">Objetivos</a>
+                    </div>
+                    <div class="contenedor-submenu-productos-responsive" id="contenedor-submenu-productos-responsive">
+                        <a href="#" class="btn-cerrar-submenu-productos-responsive" id="btn-cerrar-submenu-productos-responsive">
+                            <!-- <i class="fa fa-close"></i> -->
+                            Volver
+                        </a>
+                        <a href="#">Diseño Gráfico</a>
+                        <a href="#">Desarrollo Web</a>
+                        <a href="#">Redes Sociales</a>
+                        <a href="#">Sistema Web</a>
+                        <a href="#">Aplicación Móvil</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- <div id="header"></div> -->
+    
+
 
     <section class="start">
         <div class="container">
@@ -17,6 +135,31 @@
                     <span>HOLA TEST</span>
                     <p>resumen</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="">
+        <div class="">
+            <div class="">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="">
+            <div class="">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="">
+        <div class="">
+            <div class="">
+
             </div>
         </div>
     </section>
