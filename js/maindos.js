@@ -1,7 +1,8 @@
+
 $(document).ready(function(){
-    /********************************** 
-        Efecto Submenu Quienes Somos 
-    **********************************/
+
+    // Efecto Submenu Quienes Somos 
+
     $("#btn-quienes-somos").click(function(e){
         e.preventDefault();
         $(".contenedor-submenu-quienes-somos").toggleClass("active");
@@ -22,9 +23,9 @@ $(document).ready(function(){
         });
     });
 
-    /****************************** 
-        Efecto Submenu Productos 
-    ******************************/
+
+    // Efecto Submenu Productos 
+
     $("#btn-productos").click(function(e){
         e.preventDefault();
         $(".contenedor-submenu-productos").toggleClass("active");
@@ -45,20 +46,23 @@ $(document).ready(function(){
         });
     });
     
-    /***************************
-        Btn Cerrar Modal
-    ***************************/
+    // Btn Cerrar Modal
+
+
     $("#btn-cerrar-modal").click(function(e){
         e.preventDefault();
         $(".contenedor-modal").removeClass("active");
     });
+    
 
-    /*********************
-        Menu Responsive
-    *********************/
+//  Menu Responsive
+
     $("#btn-menu").click(function(e){
         e.preventDefault();
+        //cerrar responsive
+        var aa = $(this).attr("class")
         
+        console.log("btn menu")
         if( $(".btn-menu i").attr("class") == "fa fa-bars" ){
             $(".btn-menu i").removeClass("fa fa-bars").addClass("fa fa-close");
             $(".btn-menu").addClass("close")
@@ -66,7 +70,15 @@ $(document).ready(function(){
             $(".btn-menu i").removeClass("fa fa-close").addClass("fa fa-bars");
             $(".btn-menu").removeClass("close")
         }
-
+        if(aa.includes("close")) {
+            // $(".contenedor-menu-responsive").removeClass("active")
+            $(".contenedor-submenu-productos-responsive").removeClass("active")
+            $(".contenedor-submenu-quienes-somos-responsive").removeClass("active")
+            
+            $(".menu-responsive").removeClass("active")
+            $(".menu-responsive").removeClass("cerrar")
+            // console.log("cerrar modal responsive")
+        }
 
         $(".contenedor-menu-responsive").toggleClass("active");
 
@@ -75,22 +87,32 @@ $(document).ready(function(){
         } else {
             $(".contenedor-modal-responsive").removeClass("active");
         }
+        
+        
 
     });
+    $("#btn-menu.close").click(function (e) {
+        e.preventDefault();
+        console.log("cerrar responsive")
+        
+    })
     
 
     // Cerrar Modal
+   
 
     $(".contenedor-modal-responsive").click(function(){
-        $(".contenedor-menu-responsive").removeClass("active");
-        $(".btn-menu").removeClass("active");
-        $(".contenedor-modal-responsive").removeClass("active");
+        // $(".contenedor-menu-responsive").removeClass("active");
+        // $(".btn-menu").removeClass("active");
+        // $(".contenedor-modal-responsive").removeClass("active");
 
-        if( $(".btn-menu i").attr("class") == "fa fa-bars" ){
-            $(".btn-menu i").removeClass("fa fa-bars").addClass("fa fa-close");
-        } else{
-            $(".btn-menu i").removeClass("fa fa-close").addClass("fa fa-bars");
-        } 
+        // if( $(".btn-menu i").attr("class") == "fa fa-bars" ){
+        //     $(".btn-menu i").removeClass("fa fa-bars").addClass("fa fa-close");
+        //     $(".btn-menu").addClass("close")
+        // } else{
+        //     $(".btn-menu i").removeClass("fa fa-close").addClass("fa fa-bars");
+        //     $(".btn-menu").removeClass("close")
+        // } 
     });
 
     $("#btn-cerrar-modal-responsive").click(function(e){
