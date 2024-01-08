@@ -54,7 +54,7 @@ $(document).ready(function(){
         $(".contenedor-modal").removeClass("active");
     });
     
-
+    
 //  Menu Responsive
 
     $("#btn-menu").click(function(e){
@@ -87,8 +87,6 @@ $(document).ready(function(){
         } else {
             $(".contenedor-modal-responsive").removeClass("active");
         }
-        
-        
 
     });
     $("#btn-menu.close").click(function (e) {
@@ -97,23 +95,21 @@ $(document).ready(function(){
         
     })
     
-
     // Cerrar Modal
-   
 
-    $(".contenedor-modal-responsive").click(function(){
-        // $(".contenedor-menu-responsive").removeClass("active");
-        // $(".btn-menu").removeClass("active");
-        // $(".contenedor-modal-responsive").removeClass("active");
+    // $(".contenedor-modal-responsive").click(function(){
+    //     // $(".contenedor-menu-responsive").removeClass("active");
+    //     // $(".btn-menu").removeClass("active");
+    //     // $(".contenedor-modal-responsive").removeClass("active");
 
-        // if( $(".btn-menu i").attr("class") == "fa fa-bars" ){
-        //     $(".btn-menu i").removeClass("fa fa-bars").addClass("fa fa-close");
-        //     $(".btn-menu").addClass("close")
-        // } else{
-        //     $(".btn-menu i").removeClass("fa fa-close").addClass("fa fa-bars");
-        //     $(".btn-menu").removeClass("close")
-        // } 
-    });
+    //     // if( $(".btn-menu i").attr("class") == "fa fa-bars" ){
+    //     //     $(".btn-menu i").removeClass("fa fa-bars").addClass("fa fa-close");
+    //     //     $(".btn-menu").addClass("close")
+    //     // } else{
+    //     //     $(".btn-menu i").removeClass("fa fa-close").addClass("fa fa-bars");
+    //     //     $(".btn-menu").removeClass("close")
+    //     // } 
+    // });
 
     $("#btn-cerrar-modal-responsive").click(function(e){
         e.preventDefault();
